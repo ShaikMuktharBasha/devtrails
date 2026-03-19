@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeRoute AI</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: #e5e7eb;
+}
+
+/* layout */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* header */
+header {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+header h1 {
+  font-size: 52px;
+}
+
+header p {
+  color: #9ca3af;
+}
+
+/* glass cards */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 18px;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* titles */
+h2 {
+  margin-bottom: 10px;
+}
+
+/* highlight box */
+.highlight {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+/* workflow */
+.workflow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.step {
+  background: rgba(255,255,255,0.05);
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+  background: rgba(255,255,255,0.05);
+}
+
+/* animation */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  padding: 40px;
+  color: #9ca3af;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>SafeRoute AI</h1>
+  <p>Smart Insurance for Delivery Workers</p>
+</header>
+
+<!-- PROBLEM -->
+<section class="section fade">
+<h2>Problem</h2>
+<div class="card highlight">
+Delivery workers lose daily income due to factors like heavy rain, high pollution, and city restrictions.  
+There is no system that automatically compensates them for this income loss.
+</div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section fade">
+<h2>Our Solution</h2>
+<div class="card">
+SafeRoute AI provides an AI-powered parametric insurance system that:
+<ul>
+<li>Predicts risk using environmental data</li>
+<li>Charges weekly premium based on risk</li>
+<li>Automatically detects disruption events</li>
+<li>Triggers instant payouts without manual claims</li>
+</ul>
+</div>
+</section>
+
+<!-- SCENARIO -->
+<section class="section fade">
+<h2>Real-Life Scenario</h2>
+<div class="card">
+A delivery worker earning ₹500/day cannot work due to heavy rainfall (>20mm).  
+SafeRoute AI detects this and automatically compensates a portion of lost income.
+</div>
+</section>
+
+<!-- WORKFLOW -->
+<section class="section fade">
+<h2>How It Works</h2>
+<div class="card workflow">
+<div class="step">Register Worker</div>
+<div class="step">Collect Weather Data</div>
+<div class="step">Calculate Risk</div>
+<div class="step">Assign Weekly Premium</div>
+<div class="step">Monitor Conditions</div>
+<div class="step">Trigger Claim</div>
+<div class="step">Provide Payout</div>
+</div>
+</section>
+
+<!-- PREMIUM -->
+<section class="section fade">
+<h2>Weekly Premium Model</h2>
+<div class="card">
+<table>
+<tr><th>Risk Level</th><th>Premium</th><th>Coverage</th></tr>
+<tr><td>Low</td><td>₹20/week</td><td>₹200/day</td></tr>
+<tr><td>Medium</td><td>₹30/week</td><td>₹300/day</td></tr>
+<tr><td>High</td><td>₹40/week</td><td>₹400/day</td></tr>
+</table>
+</div>
+</section>
+
+<!-- TRIGGERS -->
+<section class="section fade">
+<h2>Automatic Triggers</h2>
+<div class="card grid">
+<div>Rainfall greater than 20mm</div>
+<div>AQI greater than 300</div>
+<div>Flood alerts</div>
+<div>Curfew or restrictions</div>
+</div>
+</section>
+
+<!-- AI -->
+<section class="section fade">
+<h2>AI Integration</h2>
+<div class="card">
+<ul>
+<li>Predicts risk using environmental data</li>
+<li>Adjusts premium dynamically</li>
+<li>Detects fraud (duplicate claims, location mismatch)</li>
+</ul>
+</div>
+</section>
+
+<!-- TECH -->
+<section class="section fade">
+<h2>Tech Stack</h2>
+<div class="card grid">
+<div>Frontend: React</div>
+<div>Backend: Node.js</div>
+<div>Database: MongoDB</div>
+<div>AI Module: Python</div>
+</div>
+</section>
+
+<!-- ARCH -->
+<section class="section fade">
+<h2>System Flow</h2>
+<div class="card highlight">
+User → Frontend → Backend → AI Logic → Trigger System → Claim → Payout
+</div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+SafeRoute AI • Hackathon Project
+</div>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
